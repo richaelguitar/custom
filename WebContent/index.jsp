@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>四川旅游在线</title>
 <style type="text/css">
 * {
 	margin: 0;
@@ -12,7 +12,7 @@
 }
 
 #nav {
-	width: 960px;
+	width: 100%;
 	margin: 80px auto 0px auto;
 	background: #04A63E;
 	color: #D8F0CE;
