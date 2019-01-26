@@ -70,8 +70,8 @@ public class UserInfoAction extends ActionSupport {
 		userInfo.setModifyDate(new Date());
 		userInfo.setModifyUserId(10086);
 		if(userInfoDao!=null) {
-			long[] ids = userInfoDao.save(userInfo);
-			log.debug("新增成功！ids.length="+ids.length);
+			long ids = userInfoDao.save(userInfo);
+			log.debug("新增成功！ids="+ids);
 		}
 		ActionContext context = ActionContext.getContext();
 		context.put("message", String.format("用户：%s，新增成功", userInfo.getUserName()));

@@ -18,7 +18,7 @@
 		<action name="userAction" class="userInfoAction">
 			<!-- 跳转是forward/WEB-INF/是防止jsp不经过action就可以访问 -->
 			<!-- result接收返回的字符串，然后做对应的事情 -->
-			<result name="success">/WEB-INF/jsp/index.jsp</result>
+			<result name="success">/success.jsp</result>
 		</action>
 	</package>
 </struts>

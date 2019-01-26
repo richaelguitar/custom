@@ -15,9 +15,24 @@ public interface BaseDao<T> {
 	 * @param entity
 	 * @return
 	 */
-	long[] save(T ...entity);
+	long save(T entity);
+	/**
+	 * 批量保存，同一个事务提交
+	 * @param entity
+	 * @return
+	 */
+	long[] saveAllInTx(T ...entity);
 	/**
 	 * 如果记录不存在则插入，否则根据id进行更新
+	 * @param entity
+	 * @return
+	 */
+	long saveOrUpdate(T entity);
+	
+	
+	/**
+	 * 如果记录不存在则插入，否则根据id进行更新
+	 * 批量操作，同一个事务提交
 	 * @param entity
 	 * @return
 	 */
