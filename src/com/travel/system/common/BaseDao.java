@@ -28,7 +28,7 @@ public interface BaseDao<T> {
 	 * @param id
 	 * @return
 	 */
-	T queryById(int id);
+	T queryById(T entity,int id);
 	
 	/**
 	 * 分页查询数据
@@ -36,7 +36,7 @@ public interface BaseDao<T> {
 	 * @param pageSize 每页显示几条数据
 	 * @return
 	 */
-	List<T> list(int pageIndex,int pageSize);
+	List<T> list(T entity,int pageIndex,int pageSize);
 	
 	/**
 	 * 根据条件筛选数据
@@ -46,9 +46,9 @@ public interface BaseDao<T> {
 	List<T> query(Map<String,Object> params);
 
 	/**
-	 * 根据id删除数据
+	 * 删除数据
 	 * @param id
 	 */
-	void delete(int ...id);
+	void delete(T ...entity);
 	
 }

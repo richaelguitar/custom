@@ -2,5 +2,25 @@
 <!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.org/dtd/hibernate-reverse-engineering-3.0.dtd" >
 
 <hibernate-reverse-engineering>
-  <table-filter match-catalog="test" match-name="userinfo"/>
+	<table-filter match-name="Privilege" match-catalog="travel"
+		match-schema="dbo">
+	</table-filter>
+	<table-filter match-name="RoleInfo" match-catalog="travel"
+		match-schema="dbo">
+	</table-filter>
+	<table-filter match-name="SysApplication" match-catalog="travel"
+		match-schema="dbo">
+	</table-filter>
+	<table-filter match-name="SysButton" match-catalog="travel"
+		match-schema="dbo">
+	</table-filter>
+	<table-filter match-name="SysMenu" match-catalog="travel"
+		match-schema="dbo">
+	</table-filter>
+	<table-filter match-name="UserInfo" match-catalog="travel"
+		match-schema="dbo">
+	</table-filter>
+	<table-filter match-name="UserRole" match-catalog="travel"
+		match-schema="dbo">
+	</table-filter>
 </hibernate-reverse-engineering>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2019-1-25 21:47:24 by Hibernate Tools 5.0.6.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="travel" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.travel.system.model.Privilege" optimistic-lock="version" polymorphism="implicit" schema="dbo" select-before-update="false" table="Privilege">
+        <id name="privilegeId" type="java.lang.Integer">
+            <column name="privilegeId"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="privilegeMaster" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="privilegeMaster"/>
+        </property>
+        <property generated="never" lazy="false" name="privilegeValue" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="privilegeValue"/>
+        </property>
+        <property generated="never" lazy="false" name="privilegeAccess" optimistic-lock="true" type="string" unique="false">
+            <column length="20" name="privilegeAccess"/>
+        </property>
+        <property generated="never" lazy="false" name="privilegeAccessValue" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="privilegeAccessValue"/>
+        </property>
+        <property generated="never" lazy="false" name="privilegeOperation" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="privilegeOperation"/>
+        </property>
+        <property generated="never" lazy="false" name="createUserId" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="createUserId"/>
+        </property>
+        <property generated="never" lazy="false" name="createDate" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="23" name="createDate"/>
+        </property>
+        <property generated="never" lazy="false" name="modifyUserId" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="modifyUserId"/>
+        </property>
+        <property generated="never" lazy="false" name="modifyDate" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="23" name="modifyDate"/>
+        </property>
+    </class>
+</hibernate-mapping>

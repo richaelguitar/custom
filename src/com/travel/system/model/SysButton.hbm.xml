@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2019-1-25 21:47:24 by Hibernate Tools 5.0.6.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="travel" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.travel.system.model.SysButton" optimistic-lock="version" polymorphism="implicit" schema="dbo" select-before-update="false" table="SysButton">
+        <id name="btnId" type="java.lang.Integer">
+            <column name="btnId"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="btnName" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="btnName"/>
+        </property>
+        <property generated="never" lazy="false" name="btnNo" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="btnNo"/>
+        </property>
+        <property generated="never" lazy="false" name="btnClass" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="btnClass"/>
+        </property>
+        <property generated="never" lazy="false" name="btnIcon" optimistic-lock="true" type="binary" unique="false">
+            <column name="btnIcon"/>
+        </property>
+        <property generated="never" lazy="false" name="btnScript" optimistic-lock="true" type="string" unique="false">
+            <column length="500" name="btnScript"/>
+        </property>
+        <property generated="never" lazy="false" name="menuNo" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="menuNo"/>
+        </property>
+        <property generated="never" lazy="false" name="initStatus" optimistic-lock="true" type="java.lang.Boolean" unique="false">
+            <column name="initStatus"/>
+        </property>
+        <property generated="never" lazy="false" name="seqNo" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="seqNo"/>
+        </property>
+        <property generated="never" lazy="false" name="createUserId" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="createUserId"/>
+        </property>
+        <property generated="never" lazy="false" name="createDate" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="23" name="createDate"/>
+        </property>
+        <property generated="never" lazy="false" name="modifyUserId" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="modifyUserId"/>
+        </property>
+        <property generated="never" lazy="false" name="modifyDate" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="23" name="modifyDate"/>
+        </property>
+    </class>
+</hibernate-mapping>

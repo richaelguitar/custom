@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2019-1-25 21:47:24 by Hibernate Tools 5.0.6.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="travel" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.travel.system.model.SysApplication" optimistic-lock="version" polymorphism="implicit" schema="dbo" select-before-update="false" table="SysApplication">
+        <id name="appId" type="java.lang.Integer">
+            <column name="appId"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="appCode" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="appCode"/>
+        </property>
+        <property generated="never" lazy="false" name="appName" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="appName"/>
+        </property>
+        <property generated="never" lazy="false" name="appDesc" optimistic-lock="true" type="string" unique="false">
+            <column length="1000" name="appDesc"/>
+        </property>
+        <property generated="never" lazy="false" name="showInMenu" optimistic-lock="true" type="java.lang.Boolean" unique="false">
+            <column name="showInMenu"/>
+        </property>
+        <property generated="never" lazy="false" name="createUserId" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="createUserId"/>
+        </property>
+        <property generated="never" lazy="false" name="createDate" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="23" name="createDate"/>
+        </property>
+        <property generated="never" lazy="false" name="modifyUserId" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="modifyUserId"/>
+        </property>
+        <property generated="never" lazy="false" name="modifyDate" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="23" name="modifyDate"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 2019-1-25 21:47:24 by Hibernate Tools 5.0.6.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping auto-import="true" default-access="property" default-cascade="none" default-lazy="true">
+    <class catalog="travel" dynamic-insert="false" dynamic-update="false" mutable="true" name="com.travel.system.model.SysMenu" optimistic-lock="version" polymorphism="implicit" schema="dbo" select-before-update="false" table="SysMenu">
+        <id name="menuId" type="java.lang.Integer">
+            <column name="menuId"/>
+            <generator class="identity"/>
+        </id>
+        <property generated="never" lazy="false" name="menuNo" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="menuNo"/>
+        </property>
+        <property generated="never" lazy="false" name="menuName" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="menuName"/>
+        </property>
+        <property generated="never" lazy="false" name="menuUrl" optimistic-lock="true" type="string" unique="false">
+            <column length="500" name="menuUrl"/>
+        </property>
+        <property generated="never" lazy="false" name="appCode" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="appCode"/>
+        </property>
+        <property generated="never" lazy="false" name="menuParentNo" optimistic-lock="true" type="string" unique="false">
+            <column length="50" name="menuParentNo"/>
+        </property>
+        <property generated="never" lazy="false" name="menuIcon" optimistic-lock="true" type="binary" unique="false">
+            <column name="menuIcon"/>
+        </property>
+        <property generated="never" lazy="false" name="isVisible" optimistic-lock="true" type="java.lang.Boolean" unique="false">
+            <column name="isVisible"/>
+        </property>
+        <property generated="never" lazy="false" name="isLeaf" optimistic-lock="true" type="java.lang.Boolean" unique="false">
+            <column name="isLeaf"/>
+        </property>
+        <property generated="never" lazy="false" name="sqeNo" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="sqeNo"/>
+        </property>
+        <property generated="never" lazy="false" name="createUserId" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="createUserId"/>
+        </property>
+        <property generated="never" lazy="false" name="createDate" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="23" name="createDate"/>
+        </property>
+        <property generated="never" lazy="false" name="modifyUserId" optimistic-lock="true" type="java.lang.Integer" unique="false">
+            <column name="modifyUserId"/>
+        </property>
+        <property generated="never" lazy="false" name="modifyDate" optimistic-lock="true" type="timestamp" unique="false">
+            <column length="23" name="modifyDate"/>
+        </property>
+    </class>
+</hibernate-mapping>
