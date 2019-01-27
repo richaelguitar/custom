@@ -31,11 +31,9 @@ public class AbstractBaseDao<T> implements BaseDao<T> {
 	public long save(T entity) {
 		// TODO Auto-generated method stub
 		if (sessionFactory != null) {
-			Session session = sessionFactory.openSession();
-//			Transaction transaction = session.beginTransaction();
-			int id = (int) session.save(entity);
-//			transaction.commit();
-			session.close();
+
+			int id = (int) sessionFactory.openSession().save(entity);
+
 			return id;
 		}
 		return 0;
@@ -100,11 +98,12 @@ public class AbstractBaseDao<T> implements BaseDao<T> {
 	public List<T> list(T entity, int pageIndex, int pageSize) {
 		// TODO Auto-generated method stub
 		List<T> roleInfos = new ArrayList<>();
-		StringBuilder sb = new StringBuilder("select * from " + entity.getClass().getSimpleName() + " where 1=1 ");
+		StringBuilder sb = new StringBuilder("from " + entity.getClass().getSimpleName() + " where 1=1 ");
 		if (pageIndex >= 0 && pageSize > 0) {
 			sb.append("limit").append(pageIndex).append(",").append(pageSize);
 		}
 		if (sessionFactory != null) {
+			//执行hql
 			Query<T> query = (Query<T>) sessionFactory.openSession().createQuery(sb.toString(), entity.getClass());
 			roleInfos.addAll(query.list());
 		}
